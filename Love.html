@@ -4,111 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'm Really Sorry ❤️</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+</head>
 
-        body {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #ff69b4, #ff1493, #ff69b4, #e73c7e);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            overflow: hidden;
-            position: relative;
-        }
+<body style="font-family: Arial; text-align:center; background:pink; padding-top:50px;">
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    <h1>sorry usap na po tayo 🥺</h1>
 
-        .bg-heart {
-            position: fixed;
-            font-size: 2em;
-            opacity: 0.15;
-            animation: floatAround 15s ease-in-out infinite;
-            pointer-events: none;
-            color: #fff;
-        }
+    <button onclick="yesClick()">Okay, I forgive you 😊</button>
+    <button onclick="noClick()" id="noBtn">Hindi, galit pa ako 😤</button>
 
-        @keyframes floatAround {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                transform: translate(100px, -100px) rotate(90deg);
-            }
-            50% {
-                transform: translate(200px, 50px) rotate(180deg);
-            }
-            75% {
-                transform: translate(-50px, -50px) rotate(270deg);
-            }
-        }
+    <p id="text"></p>
 
-        .container {
-            text-align: center;
-            padding: 50px 40px;
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 35px;
-            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.5);
-            max-width: 650px;
-            width: 90%;
-            animation: floatIn 1s ease-out;
-            border: 3px solid rgba(255, 105, 180, 0.3);
-            position: relative;
-            z-index: 10;
-        }
+<script>
+function yesClick(){
+    document.body.innerHTML = "<h1>Yay! I love you 💖</h1>";
+}
 
-        @keyframes floatIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+function noClick(){
+    document.getElementById("text").innerHTML = "Please naman 🥺";
+}
+</script>
 
-        #mainText {
-            font-size: 2.8em;
-            color: #e73c7e;
-            margin-bottom: 50px;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.3);
-            animation: pulse 2s ease-in-out infinite;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 768px) {
-            #mainText {
-                font-size: 2em;
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-
-        .buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            min-height: 200px;
-            align-items: center;
-            position: relative;
+</body>
+</html>            position: relative;
             padding: 20px;
         }
 
